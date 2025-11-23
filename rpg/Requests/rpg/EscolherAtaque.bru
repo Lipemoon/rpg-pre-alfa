@@ -1,0 +1,20 @@
+meta {
+  name: EscolherAtaque
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8080/rpg-game/batalha/escolherAtaque
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "idJogador": 1,
+    "idInimigo": 1,
+    "idTurno": 1,
+    "ataque": 1
+  }
+}

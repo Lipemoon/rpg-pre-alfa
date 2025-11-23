@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+  <title>RPG de Navegador</title>
+  <link rel="stylesheet" href="styles/mystyle.css">
+  <script src="scripts/routes.js" defer></script>
+  <script src="scripts/script.js" defer></script>
+</head>
+<body>
+
+<!-- Tela Menu -->
+<div id="tela-menu" class="tela ativa">
+  <h1>RPG de Navegador</h1>
+  <button id="btn-jogar">Jogar</button>
+  <button id="btn-creditos">Créditos</button>
+</div>
+
+<!-- Tela de atributos -->
+<div id="tela-atributos" class="tela">
+  <h2>Distribua seus pontos</h2>
+  <p>Pontos restantes: <span id="pontos-restantes">15</span></p>
+
+  <div class="atributo">
+    <h3>Força: <span id="forca">10</span></h3>
+    <button class="menos" data-attr="forca">-</button>
+    <button class="mais" data-attr="forca">+</button>
+  </div>
+
+  <div class="atributo">
+    <h3>Magia: <span id="magia">10</span></h3>
+    <button class="menos" data-attr="magia">-</button>
+    <button class="mais" data-attr="magia">+</button>
+  </div>
+
+  <div class="atributo">
+    <h3>Vida: <span id="vida">10</span></h3>
+    <button class="menos" data-attr="vida">-</button>
+    <button class="mais" data-attr="vida">+</button>
+  </div>
+
+  <button id="btn-iniciar-jogo">Iniciar Jogo</button>
+</div>
+
+<!-- Tela Créditos -->
+<div id="tela-credito" class="tela">
+  <h2>Créditos</h2>
+  <p>Leonardo</p>
+  <p>Luis Felipe</p>
+  <button id="btn-voltar-menu-credito">Voltar ao Menu</button>
+</div>
+
+<!-- Tela Principal do Jogo -->
+<div id="tela-jogo" class="tela">
+  <div id="personagem" class="personagem"></div>
+  <div id="inimigo" class="inimigo"></div>
+  <button id="btn-voltar-menu-jogo">Voltar ao Menu</button>
+</div>
+
+<!-- Tela de batalha -->
+<div id="tela-batalha" class="tela">
+  <div id="battle-log"> Bem vindo a Batalha </div>
+  <div id="battle-area">
+    <div id="player-battle"></div>
+    <div id="player-hp" class="hp-bar"></div>
+    <div id="enemy-battle"></div>
+    <div id="enemy-hp" class="hp-bar"></div>
+  </div>
+  <div id="battle-menu">
+    <button id="btn-lutar" value="1">Lutar</button>
+    <button id="btn-magia" value="2">Magia</button>
+    <button id="btn-correr" value="3">Correr</button>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+body {
+    margin:0; padding:0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  /* Telas */
+  .tela { display: none; width:100vw; height:100vh; justify-content:center; align-items:center; flex-direction:column; }
+  .tela.ativa { display:flex; }
+
+  /* Botões */
+  button { padding:10px 20px; margin:10px; cursor:pointer; border:none; border-radius:5px; font-size:18px; }
+
+  /* Menu */
+  #tela-menu button { background-color: #4CAF50; color:rgb(255, 255, 255); }
+  #tela-credito button { background-color:#2196F3; color:rgb(255, 255, 255); }
+ 
+  /* Tela de atributos */
+  #tela-atributos { color:white; background-color:#222; }
+  .atributo { margin:10px; display:flex; align-items:center; gap:10px; }
+  .atributo h3 { margin:0; }
+  #pontos-restantes { font-weight:bold; font-size:18px; }
+
+  /* Tela do jogo */
+  #tela-jogo {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/fundo.png'); /* seu tile de grama */
+    background-repeat: repeat;
+    background-size: 64px 64px;
+    overflow: hidden;
+  }
+
+  #btn-voltar-menu-jogo{
+    position:absolute; top:10px; right:10px;
+  }
+
+  .personagem, .inimigo {
+    position: absolute;
+    width: 64px;
+    height: 80px;
+    image-rendering: pixelated;
+  }
+
+  .personagem{
+    background-image: url('images/jogador.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .inimigo{
+    background-image: url('images/inimigo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; 
+    }
+
+  #battle-log {
+  position: absolute;  
+  top: 30%; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  color: white;         
+  text-align: center; 
+  font-size: 20px; 
+  z-index: 5; 
+  user-select: none; }
+
+  /* Tela de batalha */
+  #battle-area { position:relative; width:100%; height:80%; background-color:#222; }
+  #battle-menu { width:100%; height:20%; display:flex; justify-content:center; align-items:center; background-color:#111; }
+
+  #player-battle{
+    position:absolute; width:64px; height:80px; background-image:url('images/jogador.png'); background-size:cover; left:20%; bottom:20%; image-rendering:pixelated;
+  }
+
+  #enemy-battle{
+    position:absolute; width:80px; height:80px; background-image:url('images/inimigo.png'); background-size:cover; right:20%; bottom:20%; image-rendering:pixelated;
+  }
+
+  .hp-bar {
+  position: absolute;
+  width: 60px;
+  height: 12px;
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  line-height: 12px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  z-index: 5;
+}

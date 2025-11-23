@@ -1,0 +1,20 @@
+meta {
+  name: PegarInimigo
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://localhost:8080/rpg-game/inimigo/1
+  body: none
+  auth: none
+}
+
+body:json {
+  {
+    "nome": "Lua",
+    "forca": 80,
+    "vida": 100,
+    "magia": 100
+  }
+}
